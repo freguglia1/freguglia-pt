@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servizi - Alessandro Freguglia</title>
+  <link rel="stylesheet" href="stile.css">
+  <style>
+    .servizi {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .card img {width: 100%; height: 200px; object-fit: cover;}
+    .card h3 {margin: 15px;}
+    .card p {margin: 0 15px 15px;}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>I miei Servizi</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="servizi.html">Servizi</a>
+      <a href="login.html">Area Riservata</a>
+      <a href="contatti.html">Contatti</a>
+    </nav>
+  </header>
+
+  <section class="servizi">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1" alt="Schede">
+      <h3>Schede Personalizzate</h3>
+      <p>Programmi di allenamento studiati su misura per le tue esigenze.</p>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1594737625785-c19ef642d3a0" alt="Allenamento Online">
+      <h3>Allenamenti Online</h3>
+      <p>Sessioni in videochiamata per seguire i tuoi progressi ovunque tu sia.</p>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836" alt="Alimentazione">
+      <h3>Consulenza Alimentare</h3>
+      <p>Linee guida per una dieta sana ed equilibrata, in base ai tuoi obiettivi.</p>
+    </div>
+  </section>
+</body>
+</html>
