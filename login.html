@@ -1,21 +1,14 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Area Riservata - Alessandro Freguglia</title>
   <link rel="stylesheet" href="stile.css">
-  <style>
-    section {padding:60px 20px; text-align:center;}
-    form {max-width:400px; margin:auto; display:flex; flex-direction:column;}
-    form input {margin:10px 0; padding:10px; border-radius:8px; border:1px solid #ccc;}
-    form button {padding:10px; background:#007acc; color:white; border:none; border-radius:8px;}
-    form button:hover {background:#005f99;}
-  </style>
 </head>
 <body>
   <header>
-    <h1>Area Riservata</h1>
+    <div class="header-left"><h1>Area Riservata</h1></div>
     <nav>
       <a href="index.html">Home</a>
       <a href="servizi.html">Servizi</a>
@@ -24,29 +17,50 @@
     </nav>
   </header>
 
-  <section>
-    <p>Accedi con le tue credenziali per scaricare le tue schede personalizzate.</p>
-    <form onsubmit="return checkLogin(event)">
-      <input type="text" id="username" placeholder="Username" required>
-      <input type="password" id="password" placeholder="Password" required>
-      <button type="submit">Accedi</button>
-    </form>
-    <p id="login-msg"></p>
-  </section>
+  <main class="container">
+    <section class="card" style="text-align:center;">
+      <p>Accedi con le tue credenziali per scaricare le tue schede personalizzate.</p>
+
+      <form id="loginForm" onsubmit="return checkLogin(event)">
+        <input type="text" id="username" placeholder="Username" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <button type="submit">Accedi</button>
+      </form>
+
+      <p id="login-msg" style="margin-top:12px;"></p>
+
+      <!-- Esempio: link alle schede che appariranno dopo login (simulato) -->
+      <div id="schede-area" style="margin-top:18px; display:none;">
+        <p>Le tue schede:</p>
+        <ul>
+          <li><a href="schede/scheda1.pdf" target="_blank">Scheda 1 (PDF)</a></li>
+          <li><a href="schede/scheda2.pdf" target="_blank">Scheda 2 (PDF)</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Alessandro Freguglia | Tutti i diritti riservati</p>
+  </footer>
 
   <script>
-    function checkLogin(event) {
+    function checkLogin(event){
       event.preventDefault();
-      let user = document.getElementById("username").value;
-      let pass = document.getElementById("password").value;
-      let msg = document.getElementById("login-msg");
+      const user = document.getElementById('username').value.trim();
+      const pass = document.getElementById('password').value.trim();
+      const msg = document.getElementById('login-msg');
+      const schede = document.getElementById('schede-area');
 
-      if (user === "alessandro" && pass === "fitness") {
-        msg.style.color = "green";
-        msg.textContent = "Login effettuato! Le tue schede sono disponibili.";
+      // Credenziali di esempio (NON sicure) - cambiale quando metti il sito vero
+      if(user === 'alessandro' && pass === 'fitness'){
+        msg.style.color = 'green';
+        msg.textContent = 'Login effettuato! Le tue schede sono disponibili qui sotto.';
+        schede.style.display = 'block';
       } else {
-        msg.style.color = "red";
-        msg.textContent = "Credenziali errate. Riprova.";
+        msg.style.color = 'red';
+        msg.textContent = 'Credenziali errate. Riprova.';
+        schede.style.display = 'none';
       }
     }
   </script>
