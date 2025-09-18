@@ -1,26 +1,16 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Home - Alessandro Freguglia</title>
   <link rel="stylesheet" href="stile.css">
-  <style>
-    .hero {
-      text-align: center;
-      padding: 80px 20px;
-    }
-    .hero img {
-      max-width: 300px;
-      border-radius: 50%;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    }
-  </style>
 </head>
 <body>
   <header>
-    <h1>Alessandro Freguglia</h1>
-    <p>Personal Trainer</p>
+    <div class="header-left">
+      <h1>Alessandro Freguglia</h1>
+    </div>
     <nav>
       <a href="index.html">Home</a>
       <a href="servizi.html">Servizi</a>
@@ -29,23 +19,24 @@
     </nav>
   </header>
 
-  <section class="hero">
-    <img src="https://images.unsplash.com/photo-1594737625785-c19ef642d3a0" alt="Personal Trainer">
-    <h2>Benvenuto!</h2>
-    <p>
-      Sono Alessandro, il tuo Personal Trainer dedicato a migliorare il tuo benessere fisico 
-      e mentale. Allenamenti personalizzati e supporto costante per raggiungere i tuoi obiettivi.
-    </p>
-    <h3>Seguimi sui social</h3>
-    <div class="social">
-      <a href="https://www.instagram.com/alessandrofreguglia_pt" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" width="40" alt="Instagram">
-      </a>
-      <a href="https://www.tiktok.com/@alessandrofreguglia_pt" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/512/3046/3046125.png" width="40" alt="TikTok">
-      </a>
-    </div>
-  </section>
+  <main class="container">
+    <section class="hero" style="background-image:url('https://images.unsplash.com/photo-1558611848-73f7eb4001a1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1400&q=80')">
+      <img class="profile" src="https://images.unsplash.com/photo-1594737625785-c20f4d251d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Alessandro">
+      <h2>Benvenuto!</h2>
+      <p>
+        Ciao — sono Alessandro, il tuo Personal Trainer. Ti aiuto con programmi personalizzati,
+        allenamenti online e supporto pratico per raggiungere i tuoi obiettivi.
+      </p>
+      <div class="social" aria-hidden="false">
+        <a href="https://www.instagram.com/alessandrofreguglia_pt" target="_blank" rel="noopener">
+          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+        </a>
+        <a href="https://www.tiktok.com/@alessandrofreguglia_pt" target="_blank" rel="noopener">
+          <img src="https://cdn-icons-png.flaticon.com/512/3046/3046125.png" alt="TikTok">
+        </a>
+      </div>
+    </section>
+  </main>
 
   <footer>
     <p>© 2025 Alessandro Freguglia | Tutti i diritti riservati</p>
